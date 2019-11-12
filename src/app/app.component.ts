@@ -26,5 +26,5 @@ emailid;
 formdata;
 ngOnInit() { this.formdata = new FormGroup({ emailid: new FormControl("angular@gmail.com"), passwd: new FormControl("abcd1234") }); }
 
-onClickSubmit(data) { alert("Entered Email id : " + data.emailid); }
+onClickSubmit(data) { this.emailid = data.emailid;}
 }
