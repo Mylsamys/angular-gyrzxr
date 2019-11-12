@@ -41,8 +41,7 @@ passwd: new FormControl("", this.passwordvalidation)
   });
 
   this.myservice.getData().subscribe((data) => {
-//this.albumdetails = Array.from(Object.keys(data), k=>data[k]);
-this.albumdetails = Array.from(1, 1000);
+this.albumdetails = Array.from(Object.keys(data), k=>data[k]);
 console.log(this.albumdetails);
 });
   }
