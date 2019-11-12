@@ -9,8 +9,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { ScrollDispatchModule } from '@angular/cdk/scrolling';
 
+import { MyserviceService } from './myservice.service';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,ReactiveFormsModule,ScrollDispatchModule ],
+  imports:      [ BrowserModule, FormsModule,ReactiveFormsModule,HttpClientModule,ScrollDispatchModule ],
   declarations: [ AppComponent, HelloComponent ],
   bootstrap:    [ AppComponent ]
 })
