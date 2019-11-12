@@ -36,7 +36,7 @@ passwd: new FormControl("", this.passwordvalidation)
   }
 
   passwordvalidation(formcontrol) {
-if (formcontrol.value.length < 5) {
+if (formcontrol.value.length <= 5) {
 return {"passwd" : true};
 }
 }
