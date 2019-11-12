@@ -10,7 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ScrollDispatchModule } from '@angular/cdk/scrolling';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,ReactiveFormsModule ],
+  imports:      [ BrowserModule, FormsModule,ReactiveFormsModule,ScrollDispatchModule ],
   declarations: [ AppComponent, HelloComponent ],
   bootstrap:    [ AppComponent ]
 })
