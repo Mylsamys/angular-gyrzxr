@@ -20,5 +20,5 @@ changemonths(event) {
 console.log("Changed month from the Dropdown");
 console.log(event);
 }
-onClickSubmit(data) { alert("Entered Email id : " + data.passwd); }
+onClickSubmit(data) { alert("Entered Email id : " + data.emailid); }
 }
