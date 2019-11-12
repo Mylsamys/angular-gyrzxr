@@ -1,7 +1,7 @@
 <!--<hello name="{{ name }}"></hello>
 <br/>-->
 
-<div> Months : <select (change) = "changemonths($event)"> <option *ngFor = "let i of months">{{i}}</option> </select> </div> <br/>
+ <!--<div> Months : <select (change) = "changemonths($event)"> <option *ngFor = "let i of months">{{i}}</option> </select> </div> <br/>
 
 <br/>
 <div> <span *ngIf = "isavailable">Condition is valid.</span>  </div>
@@ -23,16 +23,33 @@
 <button (click)="myClickFunction($event)">
 Click Me
 </button>
-<br/><br/>
+<br/><br/>-->
 <!--<form #userlogin = "ngForm" (ngSubmit) = "onClickSubmit(userlogin.value)" > 
   <input type = "text" name = "emailid" placeholder = "emailid" ngModel> <br/> 
   <input type = "password" name = "passwd" placeholder = "password1" ngModel> <br/> 
   <input type = "submit" value = "submit"> </form>-->
 
 
-  <div> <form [formGroup]="formdata" (ngSubmit) = "onClickSubmit(formdata.value)" >
+  <!--<div> <form [formGroup]="formdata" (ngSubmit) = "onClickSubmit(formdata.value)" >
      <input type="text" class="fortextbox" name="emailid" placeholder="emailid" formControlName="emailid"> <br/> 
   <input type="password" class="fortextbox" name="passwd" placeholder="passwd" formControlName="passwd"> <br/>
 
 <input type = "submit" [disabled] = "!formdata.valid" class = "forsubmit" value = "Log In">
-</form> </div> <p> Email entered is : {{emailid}} </p>
+</form> </div> <p> Email entered is : {{emailid}} </p>-->
+
+<cdk-virtual-scroll-viewport [itemSize]="20">
+<table>
+<thead>
+<tr>
+<td>ID</td>
+<td>ThumbNail</td>
+</tr>
+</thead>
+<tbody>
+<tr *cdkVirtualFor="let album of albumdetails">
+<td>{{album.id}}</td>
+<td><img src="{{album.thumbnailUrl}}" width="100" height="100"/></td>
+</tr>
+</tbody>
+</table>
+</cdk-virtual-scroll-viewport>
