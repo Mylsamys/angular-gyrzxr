@@ -12,6 +12,7 @@ import { ScrollDispatchModule } from '@angular/cdk/scrolling';
 import { MyserviceService } from './myservice.service';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,ReactiveFormsModule,HttpClientModule,ScrollDispatchModule,BrowserAnimationsModule ],
