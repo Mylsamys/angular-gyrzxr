@@ -12,7 +12,7 @@ import { MyserviceService } from './myservice.service';
   animations: [
 trigger('myanimation',[
 state('smaller',style({
-transform : 'translateY(50px)'
+transform : 'translateY(0px)'
 })),
 state('larger',style({
 transform : 'translateY(200px)'
