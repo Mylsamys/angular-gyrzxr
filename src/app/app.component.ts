@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl,Validators } from '@angular/forms';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 import { MyserviceService } from './myservice.service';
 
@@ -7,7 +8,18 @@ import { MyserviceService } from './myservice.service';
 @Component({
   selector: 'my-app',
   templateUrl: './Binding.html',
-  styleUrls: [ './app.component.css' ]
+  styleUrls: [ './app.component.css' ],
+  animations: [
+trigger('myanimation',[
+state('smaller',style({
+transform : 'translateY(100px)'
+})),
+state('larger',style({
+transform : 'translateY(0px)'
+})),
+transition('smaller <=> larger',animate('300ms ease-in'))
+])
+]
 })
 
 export class AppComponent  {
@@ -53,4 +65,9 @@ return {"passwd" : true};
 }
 
 onClickSubmit(data) { this.emailid = data.emailid;}
+
+state: string = "smaller";
+animate() {
+this.state= this.state == 'larger' ? 'smaller' : 'larger';
+}
 }
