@@ -17,7 +17,7 @@ transform : 'translateY(0px)'
 state('larger',style({
 transform : 'translateY(200px)'
 })),
-transition('smaller <=> larger',animate('300ms ease-in'))
+transition('smaller <=> larger',animate('1000ms ease-in'))
 ])
 ]
 })
